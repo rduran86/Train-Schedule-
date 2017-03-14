@@ -1,0 +1,17 @@
+.header {
+	color: #fff !important;
+    background-color: #25383c;
+}
+
+.border {
+	border: 1px #eee solid;
+}
+
+.row {
+	margin: 5px;
+}
+
+.form-inline, .form-control{
+	width: 100% !important;
+}
+
