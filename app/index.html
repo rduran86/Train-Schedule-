@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://use.fontawesome.com/6f914d09f0.js"></script>
+    <title>Train Schedule</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Firebase JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!-- Moment.js -->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <!-- Train js -->
+    <script type="text/javascript" src="assets/javascript/train.js"></script>
+</head>
+
+<body>
+    <div class="container jumbotron">
+        <div class="row jumbotron panel header">
+            <h1 class='text-center'><i class="fa fa-train fa-font fa-2x">  Train Schedule</i></h1>
+        </div>
+        <div class="row">
+            <h3 class="panel header"><i class="fa">Current Train Schedule </i></h3>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th><i class="fa fa-train"> Train name </i></th>
+                        <th><i class="fa fa-suitcase" aria-hidden="true"> Destination </i></th>
+                        <th><i class="fa fa-clock-o" aria-hidden="true"> Frequency (min)</i></th>
+                        <th><i class="fa fa-clock-o" aria-hidden="true"> Next Arrival</i></th>
+                        <th><i class="fa fa-clock-o" aria-hidden="true"> Minutes Away</i></th>
+                    </tr>
+                </thead>
+                <tbody id='tableContent'>
+                    <!-- Table rows go here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <h3 class='panel header'><i class="fa">Add a Train</i></h3>
+            <form class="form-inline" role="form">
+                <h4><i class="fa">Train Name</i></h4>
+                <input class='form-control' type="text" name="train name" id='train-name'>
+                <br>
+                <h4><i class="fa">Destination</i></h4>
+                <input class='form-control' type="text" name="destination" id="destination">
+                <br>
+                <h4><i class="fa">First Train Tiime (HH:mm - military time)</i></h4>
+                <input class='form-control' type="text" name="first train" id="first-train-time">
+                <br>
+                <h4><i class="fa">Frequency in min</i></h4>
+                <input class='form-control' type="number" name="frequency" id="frequency">
+                <br>
+                <br>
+                <button id='add-train' class='btn btn-lg header'> <i class="fas">submit</i></button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
